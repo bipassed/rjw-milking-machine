@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>bipassed.milkingmachine</packageId>
+        <name>Milking Machine</name>
+        <author>Bi-Passed</author>
+        <supportedVersions>
+            <li>1.3</li>
+        </supportedVersions>
+        <description>milking apparel</description>
+        <modDependencies>
+            <li>
+                <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+                <displayName>Vanilla Expanded Framework</displayName>
+                <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+            </li>
+            <li>
+                <packageId>rim.job.world</packageId>
+                <displayName>RimJobWorld</displayName>
+                <steamWorkshopUrl>https://gitgud.io/Ed86/rjw</steamWorkshopUrl>
+            </li>
+        </modDependencies>
+</ModMetaData>

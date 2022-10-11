@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="ApparelMakeableBase">
+        <defName>LM_MilkingMachine</defName>
+        <label>milking machine</label>
+        <description>This milking machine is attatched to the body, allowing the user some mobility but due to the constant stimuli, it becomes hard for the wearer to focus.</description>
+        <graphicData>
+          <texPath>MilkingMachine/MM</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>1.00</drawSize>
+        </graphicData>
+        <techLevel>Neolithic</techLevel>
+        <costStuffCount>70</costStuffCount>
+        <stuffCategories>
+          <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>180</MaxHitPoints>
+          <WorkToMake>8000</WorkToMake>
+          <Mass>1</Mass>
+          <StuffEffectMultiplierArmor>0.00</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1.2</EquipDelay>
+        </statBases>
+        <apparel>
+          <bodyPartGroups>
+            <li>Torso</li>
+          </bodyPartGroups>
+          <wornGraphicPath>MilkingMachine/MM</wornGraphicPath>
+          <layers>
+            <li>Shell</li>
+          </layers>
+          <tags>
+            <li>IndustrialBasic</li>
+          </tags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+        </apparel>
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li Class="VFECore.CompProperties_ApparelHediffs">
+              <hediffDefnames>
+                <li>LM_MilkingHediff</li>
+              </hediffDefnames>
+            </li>
+        </comps>
+      </ThingDef>
+
+</Defs>

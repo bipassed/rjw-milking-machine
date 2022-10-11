@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- It is not necessary to list every bodypart, only those you want to reveal because they are covered (E.g., crotchless pants that cover "Legs" would only need an entry for "Genitals/FeaturelessCrotch") More won't break anything, but you can save yourself some work. -->
+<!-- The code works this way: -->
+<!-- - The CanDraw() method of AlienRaces returns a false, my code then checks if CanDrawRevealing() might be true -->
+<!-- - It makes a list of all clothes the character is wearing that would cover the bodyAddon, using the bodypartgroup (Eg. Torso, Legs) as defined in the bodyAddon Def entry <hiddenUnderApparelFor> -->
+<!-- - If every clothing item on that list has a revealingPath entry matching both the <path> defined for the bodyAddon and our pawn's bodytpe, the bodyAddon gets drawn -->
+<!-- - This should work for any type of bodyaddon, e.g. tails too. -->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimNudeWorld</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="LM_MilkingMachine"]</xpath>
+					<value>
+						<li Class="RevealingApparel.ApparelRevealingExtension">
+							<revealingBodyPartEntries>
+								<li>
+									<revealingPath>Breasts/FeaturelessLeft</revealingPath>
+									<revealingBodyTypes>
+										<li>Female</li>
+										<li>Thin</li>
+										<li>Male</li>
+										<li>Fat</li>
+										<li>Hulk</li>
+									</revealingBodyTypes>
+								</li>
+								<li>
+									<revealingPath>Breasts/FeaturelessRight</revealingPath>
+									<revealingBodyTypes>
+										<li>Female</li>
+										<li>Thin</li>
+										<li>Male</li>
+										<li>Fat</li>
+										<li>Hulk</li>
+									</revealingBodyTypes>
+								</li>
+								<li>
+									<revealingPath>Genitals/Testicles/FeaturelessTesticles</revealingPath>
+									<revealingBodyTypes>
+										<li>Female</li>
+										<li>Thin</li>
+										<li>Male</li>
+										<li>Fat</li>
+										<li>Hulk</li>
+									</revealingBodyTypes>
+								</li>
+								<li>
+									<revealingPath>Genitals/Pubes/Pubes</revealingPath>
+									<revealingBodyTypes>
+										<li>Female</li>
+										<li>Thin</li>
+										<li>Male</li>
+										<li>Fat</li>
+										<li>Hulk</li>
+									</revealingBodyTypes>
+								</li>								
+								<li>
+									<revealingPath>Anus/FeaturelessAnus</revealingPath>
+									<revealingBodyTypes>
+										<li>Female</li>
+										<li>Thin</li>
+										<li>Male</li>
+										<li>Fat</li>
+										<li>Hulk</li>
+									</revealingBodyTypes>
+								</li>
+							</revealingBodyPartEntries>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
