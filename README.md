@@ -10,7 +10,7 @@ The pawn will have 70% max consciousness and 50% max moving capacities while wor
 INCOMPATABILITIES<br>
 None<br>
 <br>
-Thank you to...<br>
+THANK YOU TO...<br>
 ShauaPuta for providing the code I needed for getting breast sizes<br>
 Tory187 for making this mod better<br>
 
