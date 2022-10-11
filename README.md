@@ -5,6 +5,7 @@ Equip on a colonist, slave or prisoner to milk their breasts and penises, if app
 Men with flat chests will still be milked.<br>
 Breasts produce Milk depending on body size times breast size (look in source for actual formula)<br>
 Penises produce UsedCondoms depending on body size times penis size (look in source for actual formula)<br>
+The pawn will have 70% max consciousness and 50% max moving capacities while worn<br>
 <br>
 INCOMPATABILITIES<br>
 None<br>
