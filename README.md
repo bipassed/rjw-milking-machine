@@ -1,4 +1,4 @@
-Requires RimJobWorld (obviously) and Vanilla Expanded Framework
+<p><h2>Requires RimJobWorld (obviously) and Vanilla Expanded Framework<h2><br>
 
 Optional RimNude Support for Revealing Parts
 
@@ -15,7 +15,6 @@ Penises produce UsedCondoms depending on body size times penis size (look in sou
 TODO
 
 Allow specific parts to be of a higher production rate (udders produce more than normal breasts, etc)
-
 Apply higher hunger rate to milking hediff
-
 Fully satisfy sex need while worn
+</p>
