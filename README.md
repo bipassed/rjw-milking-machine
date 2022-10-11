@@ -1,4 +1,4 @@
-<p><h2>Requires RimJobWorld (obviously) and Vanilla Expanded Framework</h2><br>
+<p><h2>Requires RimJobWorld (obviously) and Vanilla Expanded Framework</h2>
 Optional RimNude Support for Revealing Parts<br>
 <br>
 Equip on a colonist, slave or prisoner to milk their breasts and penises, if applicable, every 24 hours.
