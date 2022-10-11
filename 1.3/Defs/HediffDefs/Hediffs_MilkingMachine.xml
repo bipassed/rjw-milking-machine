@@ -11,6 +11,7 @@
         <stages>
             <li>
                 <minSeverity>0.05</minSeverity>
+                <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
                 <capMods>
                     <li>
                         <capacity>Consciousness</capacity>

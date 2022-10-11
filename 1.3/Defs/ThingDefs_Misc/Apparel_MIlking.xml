@@ -48,6 +48,62 @@
               </hediffDefnames>
             </li>
         </comps>
-      </ThingDef>
+        <modExtensions>
+          <li  MayRequire="shauaputa.rimnudeworld" Class="RevealingApparel.ApparelRevealingExtension">
+            <revealingBodyPartEntries>
+              <li>
+                <revealingPath>Breasts/FeaturelessLeft</revealingPath>
+                <revealingBodyTypes>
+                  <li>Female</li>
+                  <li>Thin</li>
+                  <li>Male</li>
+                  <li>Fat</li>
+                  <li>Hulk</li>
+                </revealingBodyTypes>
+              </li>
+              <li>
+                <revealingPath>Breasts/FeaturelessRight</revealingPath>
+                <revealingBodyTypes>
+                  <li>Female</li>
+                  <li>Thin</li>
+                  <li>Male</li>
+                  <li>Fat</li>
+                  <li>Hulk</li>
+                </revealingBodyTypes>
+              </li>
+              <li>
+                <revealingPath>Genitals/Testicles/FeaturelessTesticles</revealingPath>
+                <revealingBodyTypes>
+                  <li>Female</li>
+                  <li>Thin</li>
+                  <li>Male</li>
+                  <li>Fat</li>
+                  <li>Hulk</li>
+                </revealingBodyTypes>
+              </li>
+              <li>
+                <revealingPath>Genitals/Pubes/Pubes</revealingPath>
+                <revealingBodyTypes>
+                  <li>Female</li>
+                  <li>Thin</li>
+                  <li>Male</li>
+                  <li>Fat</li>
+                  <li>Hulk</li>
+                </revealingBodyTypes>
+              </li>								
+              <li>
+                <revealingPath>Anus/FeaturelessAnus</revealingPath>
+                <revealingBodyTypes>
+                  <li>Female</li>
+                  <li>Thin</li>
+                  <li>Male</li>
+                  <li>Fat</li>
+                  <li>Hulk</li>
+                </revealingBodyTypes>
+              </li>
+            </revealingBodyPartEntries>
+          </li>
+        </modExtensions>
+    </ThingDef>
 
 </Defs>
