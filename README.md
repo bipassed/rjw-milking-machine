@@ -1,4 +1,4 @@
-<p><h2>Requires RimJobWorld (obviously) and Vanilla Expanded Framework<h2><br>
+<p><h2>Requires RimJobWorld (obviously) and Vanilla Expanded Framework</h2><br>
 
 Optional RimNude Support for Revealing Parts
 
