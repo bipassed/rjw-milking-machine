@@ -12,7 +12,7 @@ None<br>
 <br>
 TODO<br>
 - Allow specific parts to be of a higher production rate (udders produce more than normal breasts, etc)<br>
-- Apply higher hunger rate to milking hediff<br>
+- Apply higher hunger rate to milking hediff !COMPLETED LOCALLY! <br>
 - Fully satisfy sex need while worn<br>
 - Split into two clothing articles<br>
 - Use Cum from Sexperience if active<br>
