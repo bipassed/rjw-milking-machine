@@ -13,5 +13,7 @@ namespace MilkingMachine
     {
         public static ThingDef Milk;
         public static ThingDef UsedCondom;
+        public static ThingDef GatheredCum;
+        public static ThingDef LM_DragonCum;
     }
 }
