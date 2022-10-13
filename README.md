@@ -12,7 +12,7 @@ None<br>
 <br>
 THANK YOU TO...<br>
 ShauaPuta for providing the code I needed for getting breast sizes<br>
-Tory187 for making this mod better<br>
+Tory187 for helping with RimNude support<br>
 
 <br>
 TODO<br>
