@@ -10,7 +10,7 @@ Each apparel lowers concsiousness and moving by 20% and increases hunger rate by
 <br>
 INCOMPATABILITIES<br>
 None<br>
-NOTE: If you do you not play with Sexperience, you will get an error about GatheredCum not existing. This can be safely ignored.<br>
+NOTE: If you do you not play with Sexperience, you will get an error about GatheredCum not existing. This can be safely ignored<br>
 <br>
 THANK YOU TO...<br>
 ShauaPuta for providing the code I needed for getting breast sizes<br>
