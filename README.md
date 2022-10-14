@@ -19,4 +19,8 @@ Void Chicken for helping with Sexperience support<br>
 <br>
 TODO<br>
 - Fully satisfy sex need while worn<br>
+- c0ffee ideo support<br>
+- Drug similar to lactX from MC for even more production<br>
+- Rare trait that quadruples milk and semen production<br>
+- Messy quirk support for double production<br>
 </p>
