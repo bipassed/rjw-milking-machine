@@ -23,4 +23,5 @@ TODO<br>
 - Drug similar to lactX from MC for even more production<br>
 - Rare trait that quadruples milk and semen production<br>
 - Messy quirk support for double production<br>
+- Appetite decreasing drug to decrease the increased hunger rate milking brings<br>
 </p>
