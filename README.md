@@ -18,6 +18,7 @@ Tory187 for helping with RimNude support<br>
 Void Chicken for helping with Sexperience support<br>
 <br>
 TODO<br>
+- Nerf dragon cum<br>
 - Fully satisfy sex need while worn<br>
 - c0ffee ideo support<br>
 - Drug similar to lactX from MC for even more production<br>
