@@ -18,6 +18,10 @@ Tory187 for helping with RimNude support<br>
 Void Chicken for helping with Sexperience support<br>
 <br>
 TODO<br>
+- 1.4 SUPPORT<br>
+- Increase amount milked from new lactacting hediff<br>
+- Rich, expensive and tasty meal made to increase milk production<br>
+- Advanced and tribal versions of both milking machines<br>
 - Nerf dragon cum<br>
 - Fully satisfy sex need while worn<br>
 - c0ffee ideo support<br>
