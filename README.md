@@ -17,16 +17,16 @@ ShauaPuta for providing the code I needed for getting breast sizes<br>
 Tory187 for helping with RimNude support<br>
 Void Chicken for helping with Sexperience support<br>
 <br>
-TODO<br>
+TODO (in order of greatest importance)<br>
 - 1.4 SUPPORT<br>
-- Increase amount milked from new lactacting hediff<br>
-- Rich, expensive and tasty meal made to increase milk production<br>
-- Advanced and tribal versions of both milking machines<br>
-- Nerf dragon cum<br>
-- Fully satisfy sex need while worn<br>
 - c0ffee ideo support<br>
+- Nerf dragon cum<br>
+- Increase amount milked from new lactacting hediff<br>
+- Fully satisfy sex need while worn<br>
+- Appetite decreasing drug to decrease the increased hunger rate milking brings<br>
 - Drug similar to lactX from MC for even more production<br>
+- Rich, expensive and tasty meal made to increase milk production<br>
 - Rare trait that quadruples milk and semen production<br>
 - Messy quirk support for double production<br>
-- Appetite decreasing drug to decrease the increased hunger rate milking brings<br>
+- Advanced and tribal versions of both milking machines<br>
 </p>
