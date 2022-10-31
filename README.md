@@ -10,18 +10,15 @@ Each apparel lowers concsiousness and moving by 20% and increases hunger rate by
 <br>
 INCOMPATABILITIES<br>
 None<br>
-NOTE: If you do you not play with Sexperience, you will get an error about GatheredCum not existing. This can be safely ignored<br>
 <br>
 THANK YOU TO...<br>
 ShauaPuta for providing the code I needed for getting breast sizes<br>
 Tory187 for helping with RimNude support<br>
-Void Chicken for helping with Sexperience support<br>
+Void Chicken for helping with Sexperience support and helping get rid of my ThingDef errors<br>
 <br>
 TODO (in order of greatest importance)<br>
-- 1.4 SUPPORT<br>
 - c0ffee ideo support<br>
-- Nerf dragon cum<br>
-- Increase amount milked from new lactacting hediff<br>
+- Increase amount milked from Biotech lactacting hediff<br>
 - Fully satisfy sex need while worn<br>
 - Appetite decreasing drug to decrease the increased hunger rate milking brings<br>
 - Drug similar to lactX from MC for even more production<br>
