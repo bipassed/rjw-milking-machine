@@ -11,7 +11,10 @@ namespace MilkingMachine
     [DefOf]
     public static class HediffDefOf
     {
+        [MayRequire("rjw.sexperience")]
         public static HediffDef Lactating_Drug;
+
+        [MayRequire("rjw.sexperience")]
         public static HediffDef Lactating_Permanent;
     }
 }

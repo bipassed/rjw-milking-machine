@@ -1,0 +1,7 @@
+30 October 2022
+- Updated for 1.4
+- Updated dragon cum's texture path
+- Changed dragon cum's nutrition from 1.0 to 0.5
+- Removed lactation from Milkable Colonists affecting semen production
+- Improved bools
+- Fixed errors about missing ThingDefs

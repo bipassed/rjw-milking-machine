@@ -12,8 +12,12 @@ namespace MilkingMachine
     public static class ThingDefOf
     {
         public static ThingDef Milk;
+
         public static ThingDef UsedCondom;
+
+        [MayRequire("rjw.sexperience")]
         public static ThingDef GatheredCum;
+
         public static ThingDef LM_DragonCum;
     }
 }

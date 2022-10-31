@@ -28,5 +28,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\Milk
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\MilkingMachine\obj\Debug\MilkingMachine.csproj.CopyComplete
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\MilkingMachine\obj\Debug\MilkingMachine.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\MilkingMachine\obj\Debug\MilkingMachine.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\MilkingMachine\bin\Debug\RJW.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Milking Apparel\MilkingMachine\bin\Debug\0MultiplayerAPI.dll

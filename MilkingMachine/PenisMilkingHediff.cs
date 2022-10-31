@@ -11,14 +11,13 @@ namespace MilkingMachine
 {
     public class PenisMilkingHediff : HediffWithComps
     {
-        public static bool SexperienceActive = ModLister.GetActiveModWithIdentifier("rjw.sexperience") != null;
+        public static bool SexperienceActive = ModsConfig.IsActive("rjw.sexperience");
 
         public static float penisMultiplier;
         public static float horse = 1;
         public static float dragon = 1;
         public static float dog = 1;
         public static float demon = 1;
-        public static float lactatingMultiplier = 1;
         public static float peg;
         public override void Tick()
         {
@@ -47,10 +46,6 @@ namespace MilkingMachine
                                 PartSizeExtension.TryGetLength(penis, out float penisLength);
                                 PartSizeExtension.TryGetGirth(penis, out float penisGirth);
                                 penisMultiplier = penisLength / penisGirth;
-                                if (pawn.health.hediffSet.HasHediff(HediffDefOf.Lactating_Drug) || pawn.health.hediffSet.HasHediff(HediffDefOf.Lactating_Permanent))
-                                {
-                                    lactatingMultiplier = 3;
-                                }
                                 // Racial penis checks
                                 if (penis.LabelBase.ToLower().Contains("equine"))
                                     horse = 16;
@@ -61,15 +56,14 @@ namespace MilkingMachine
                                 if (penis.LabelBase.ToLower().Contains("dragon"))
                                 {
                                     Thing dragonPenisThing = ThingMaker.MakeThing(ThingDefOf.LM_DragonCum);
-                                    dragonPenisThing.stackCount = (int)(6 * lactatingMultiplier);
+                                    dragonPenisThing.stackCount = (int)(6);
                                     GenPlace.TryPlaceThing(dragonPenisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
                                     return;
                                 }
-                                //Log.Message(pawn + "'s 1 is: " + penisMultiplier);
                                 if (SexperienceActive == true)
                                 {
                                     Thing penisThing = ThingMaker.MakeThing(ThingDefOf.GatheredCum);
-                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon) * lactatingMultiplier);
+                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon));
                                     if (penisThing.stackCount < 1)
                                         penisThing.stackCount = 1;
                                     GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
@@ -77,7 +71,7 @@ namespace MilkingMachine
                                 else
                                 {
                                     Thing penisThing = ThingMaker.MakeThing(ThingDefOf.UsedCondom);
-                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon) * lactatingMultiplier);
+                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon));
                                     if (penisThing.stackCount < 1)
                                         penisThing.stackCount = 1;
                                     GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
