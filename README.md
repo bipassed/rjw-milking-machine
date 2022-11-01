@@ -19,7 +19,9 @@ Void Chicken for helping with a full variety of things <3<br>
 <br>
 TODO (in order of greatest importance)<br>
 - c0ffee ideo support<br>
+<br>
 - Appetite decreasing drug to decrease the increased hunger rate milking brings<br>
 - Drug similar to lactX from MC for even more production<br>
 - Rich, expensive and tasty meal made to increase milk production<br>
+- Sex need influences production amount<br>
 </p>
