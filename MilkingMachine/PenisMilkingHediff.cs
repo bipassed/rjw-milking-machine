@@ -11,18 +11,20 @@ namespace MilkingMachine
 {
     public class PenisMilkingHediff : HediffWithComps
     {
-        public static bool SexperienceActive = ModsConfig.IsActive("rjw.sexperience");
+        public static bool Sexperience = ModsConfig.IsActive("rjw.sexperience");
 
-        public static float penisMultiplier;
+        public static float penisMultiplier = 1;
+        public static float traitMultiplier = 1;
+        public static float quirkMultiplier = 1;
         public static float horse = 1;
         public static float dragon = 1;
         public static float dog = 1;
         public static float demon = 1;
-        public static float peg;
         public override void Tick()
         {
             Pawn pawn = this.pawn;
-            if (pawn.IsHashIntervalTick(60000)) // 60000
+            Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
+            if (pawn.IsHashIntervalTick(300)) // 60000
             {
                 if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave)
                 {
@@ -55,27 +57,24 @@ namespace MilkingMachine
                                     demon = 6.66f;
                                 if (penis.LabelBase.ToLower().Contains("dragon"))
                                 {
-                                    Thing dragonPenisThing = ThingMaker.MakeThing(ThingDefOf.LM_DragonCum);
+                                    Thing dragonPenisThing = ThingMaker.MakeThing(VariousDefOf.LM_DragonCum);
                                     dragonPenisThing.stackCount = (int)(6);
                                     GenPlace.TryPlaceThing(dragonPenisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
                                     return;
                                 }
-                                if (SexperienceActive == true)
-                                {
-                                    Thing penisThing = ThingMaker.MakeThing(ThingDefOf.GatheredCum);
-                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon));
-                                    if (penisThing.stackCount < 1)
-                                        penisThing.stackCount = 1;
-                                    GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
-                                }
-                                else
-                                {
-                                    Thing penisThing = ThingMaker.MakeThing(ThingDefOf.UsedCondom);
-                                    penisThing.stackCount = (int)(((pawn.BodySize * penisMultiplier) * horse * dog * demon));
-                                    if (penisThing.stackCount < 1)
-                                        penisThing.stackCount = 1;
-                                    GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
-                                }
+                                Thing penisThing = ThingMaker.MakeThing(VariousDefOf.UsedCondom);
+                                if (Sexperience == true)
+                                    penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
+                                // Trait and quirk checks
+                                if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
+                                    traitMultiplier = 3;
+                                if (pawn.Has(Quirk.Messy))
+                                    quirkMultiplier = 2;
+                                penisThing.stackCount = (int)(pawn.BodySize * penisMultiplier * traitMultiplier * quirkMultiplier * horse * dog * demon);
+                                if (penisThing.stackCount < 1)
+                                    penisThing.stackCount = 1;
+                                GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+                                sexNeed.CurLevel += 1;
                             }
                         }
                     }

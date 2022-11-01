@@ -52,10 +52,9 @@
   <ItemGroup>
     <Compile Include="Custom_Genital_Helper.cs" />
     <Compile Include="BreastMilkingHediff.cs" />
-    <Compile Include="HediffDefOf.cs" />
     <Compile Include="PenisMilkingHediff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThingDefOf.cs" />
+    <Compile Include="VariousDefOf.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
