@@ -17,9 +17,10 @@ Before you start your new milk farm, you should take note of the following:
  - [Sexperience](https://www.loverslab.com/topic/193448-mod-rjw-sexperience-continued/)
  
  **Credits**
- ShauaPuta for helping with code
- Void Chicken for helping with code
- Tory187 for helping with RimNude support
+
+ - ShauaPuta for helping with code
+ - Void Chicken for helping with code 
+ - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
  - [c0ffee's Ideology support](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons)
