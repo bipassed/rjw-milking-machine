@@ -22,7 +22,5 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
- - [c0ffee's Ideology support](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons)
- - [amevarashi's Sexperience Ideology support](https://www.loverslab.com/topic/195154-mod-rjw-sexperience-ideology/)
  - Hunger decreasing drug with potentially horrible side effects
  - Aphrodisiac drug which increases cum and milk amount
