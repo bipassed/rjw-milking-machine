@@ -22,5 +22,8 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
+ - The OTHER Milkable Colonists mod
+ - Allow milking apparel for nudists
+ - Animal milking gear
  - Hunger decreasing drug with potentially horrible side effects
  - Aphrodisiac drug which increases cum and milk amount
