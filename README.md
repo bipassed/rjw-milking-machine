@@ -9,7 +9,7 @@ Before you start your new milk farm, you should take note of the following:
  - Each piece of the apparel lowers consciousness and moving by 20%, while increasing hunger rate by 20%
 
 **Known Incompatibilities**
- - None. If you know one make an issue about it
+ - [Coffees RJW Ideology Addons](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons) | Will eventually be compat, but not my business.
 
 **Supported Mods**
  - [RimNude](https://gitgud.io/Tory/rimnude-unofficial)
