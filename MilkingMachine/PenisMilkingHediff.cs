@@ -24,7 +24,7 @@ namespace MilkingMachine
         {
             Pawn pawn = this.pawn;
             Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
-            if (pawn.IsHashIntervalTick(300)) // 60000
+            if (pawn.IsHashIntervalTick(60000)) // 60000
             {
                 if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave)
                 {
@@ -51,11 +51,11 @@ namespace MilkingMachine
                                 // Racial penis checks
                                 if (penis.LabelBase.ToLower().Contains("equine"))
                                     horse = 16;
-                                if (penis.LabelBase.ToLower().Contains("canine"))
+                                else if (penis.LabelBase.ToLower().Contains("canine"))
                                     dog = 4;
-                                if (penis.LabelBase.ToLower().Contains("demon"))
+                                else if (penis.LabelBase.ToLower().Contains("demon"))
                                     demon = 6.66f;
-                                if (penis.LabelBase.ToLower().Contains("dragon"))
+                                else if (penis.LabelBase.ToLower().Contains("dragon"))
                                 {
                                     Thing dragonPenisThing = ThingMaker.MakeThing(VariousDefOf.LM_DragonCum);
                                     dragonPenisThing.stackCount = (int)(6);
@@ -66,9 +66,9 @@ namespace MilkingMachine
                                 if (Sexperience == true)
                                     penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
                                 // Trait and quirk checks
-                                if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
+                                else if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
                                     traitMultiplier = 3;
-                                if (pawn.Has(Quirk.Messy))
+                                else if (pawn.Has(Quirk.Messy))
                                     quirkMultiplier = 2;
                                 penisThing.stackCount = (int)(pawn.BodySize * penisMultiplier * traitMultiplier * quirkMultiplier * horse * dog * demon);
                                 if (penisThing.stackCount < 1)

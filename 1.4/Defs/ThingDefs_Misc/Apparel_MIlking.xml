@@ -6,6 +6,7 @@
         <costStuffCount>45</costStuffCount>
         <stuffCategories>
           <li>Leathery</li>
+          <li>Fabric</li>
         </stuffCategories>
         <thingCategories>
           <li>Apparel</li>
@@ -17,6 +18,7 @@
           <EquipDelay>0.8</EquipDelay>
         </statBases>
         <tickerType>Normal</tickerType>
+        <countsAsClothingForNudity>false</countsAsClothingForNudity>
     </ThingDef>
 
     <ThingDef ParentName="LM_MM">

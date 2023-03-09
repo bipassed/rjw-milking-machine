@@ -1,3 +1,7 @@
+9 March 2023
+- Added support for ED86's Milkable Colonists (rjw.milk.humanoid)
+- Milking apparel no longer counts as clothing for nudists
+
 1 November 2022
 - Sex need becomes fully satisfied when milked
 - Messy quirk slightly increases penis milking amount

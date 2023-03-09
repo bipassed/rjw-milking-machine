@@ -11,7 +11,8 @@ namespace MilkingMachine
 {
     public class BreastMilkingHediff : HediffWithComps
     {
-        public static bool MilkableColonists = ModsConfig.IsActive("mlie.milkablecolonists");
+        public static bool MlieMilkableColonists = ModsConfig.IsActive("mlie.milkablecolonists");
+        public static bool ED86MilkableColonists = ModsConfig.IsActive("rjw.milk.humanoid");
         public static bool Biotech = ModsConfig.BiotechActive;
 
         public static float breastMultiplier = 1;
@@ -22,7 +23,7 @@ namespace MilkingMachine
         public override void Tick()
         {
             Pawn pawn = this.pawn;
-            if (pawn.IsHashIntervalTick(300)) //60000
+            if (pawn.IsHashIntervalTick(60000)) //60000
             {
                 if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave)
                 {
@@ -42,17 +43,17 @@ namespace MilkingMachine
                                 PartSizeExtension.TryGetCupSize(breast, out float cupSize);
                                 breastMultiplier = cupSize / breastWeight;
                                 // Mod checks
-                                if (MilkableColonists == true)
+                                if (MlieMilkableColonists == true || ED86MilkableColonists == true)
                                     if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Drug) || pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Permanent))
                                         mcLactating = 2;
-                                if (Biotech == true)
+                                else if (Biotech == true)
                                     if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating))
                                         bLactating = 2;
                                 // Racial breast checks
-                                if (breast.LabelBase.ToLower().Contains("udder"))
-                                    udder = 8;
+                                else if (breast.LabelBase.ToLower().Contains("udder"))
+                                    udder = 6;
                                 // Trait checks
-                                if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
+                                else if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
                                     traitMultiplier = 3;
                                 Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
                                 Thing breastThing = ThingMaker.MakeThing(VariousDefOf.Milk);
