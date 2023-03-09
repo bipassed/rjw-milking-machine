@@ -13,6 +13,7 @@ Before you start your new milk farm, you should take note of the following:
 
 **Supported Mods**
  - [RimNude](https://gitgud.io/Tory/rimnude-unofficial)
+ - [Milkable Colonists (Ed86's Version)](https://gitgud.io/Ed86/rjw-mc)
  - [Milkable Colonists (Mlie's Continuation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2218407878)
  - [Sexperience](https://www.loverslab.com/topic/193448-mod-rjw-sexperience-continued/)
  
@@ -22,8 +23,6 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
- - The OTHER Milkable Colonists mod
- - Allow milking apparel for nudists
  - Animal milking gear
  - Hunger decreasing drug with potentially horrible side effects
  - Aphrodisiac drug which increases cum and milk amount
