@@ -24,6 +24,7 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
+ - onslort's Milkable Colonists
  - Animal milking gear
  - Hunger decreasing drug with potentially horrible side effects
  - Aphrodisiac drug which increases cum and milk amount
