@@ -18,7 +18,9 @@
           <EquipDelay>0.8</EquipDelay>
         </statBases>
         <tickerType>Normal</tickerType>
-        <countsAsClothingForNudity>false</countsAsClothingForNudity>
+        <apparel>
+          <countsAsClothingForNudity>false</countsAsClothingForNudity>
+        </apparel>
     </ThingDef>
 
     <ThingDef ParentName="LM_MM">
