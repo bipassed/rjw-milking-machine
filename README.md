@@ -11,6 +11,7 @@ Before you start your new milk farm, you should take note of the following:
 
 **Known Incompatibilities**
  - [Coffees RJW Ideology Addons](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons) | Will eventually be compat, but not my business
+ - [Rimworld-Animation Patch](https://www.loverslab.com/files/file/23398-rimworld-animation-patch/) | This mod makes parts from RimNudeWorld not show up while wearing milking apparel
 
 **Supported Mods**
  - [RimNude](https://gitgud.io/Tory/rimnude-unofficial)
