@@ -7,7 +7,6 @@ Before you start your new milk farm, you should take note of the following:
  - The only breasts that modify milk output are the udders
  - The only penises that modify cum output are horse, dog, demon and dragon
  - Multiple breasts and multiple penises increase production
- - Each piece of the apparel lowers consciousness and moving by 20%, while increasing hunger rate by 20%
 
 **Known Incompatibilities**
  - [Coffees RJW Ideology Addons](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons) | Will eventually be compat, but not my business
@@ -25,7 +24,5 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
- - onslort's Milkable Colonists
+ - onslort's Milkable Colonists support
  - Animal milking gear
- - Hunger decreasing drug with potentially horrible side effects
- - Aphrodisiac drug which increases cum and milk amount
