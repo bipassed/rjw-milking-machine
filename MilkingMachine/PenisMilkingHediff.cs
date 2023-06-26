@@ -16,6 +16,7 @@ namespace MilkingMachine
         public static float penisMultiplier = 1;
         public static float traitMultiplier = 1;
         public static float quirkMultiplier = 1;
+        public static float needMultiplier = 1;
         public static float horse = 1;
         public static float dragon = 1;
         public static float dog = 1;
@@ -48,6 +49,8 @@ namespace MilkingMachine
                                 PartSizeExtension.TryGetLength(penis, out float penisLength);
                                 PartSizeExtension.TryGetGirth(penis, out float penisGirth);
                                 penisMultiplier = penisLength / penisGirth;
+                                needMultiplier = (float)(2.1 - sexNeed.CurLevel);
+                                needMultiplier = (int)needMultiplier;
                                 // Racial penis checks
                                 if (penis.LabelBase.ToLower().Contains("equine"))
                                     horse = 16;
@@ -58,7 +61,7 @@ namespace MilkingMachine
                                 else if (penis.LabelBase.ToLower().Contains("dragon"))
                                 {
                                     Thing dragonPenisThing = ThingMaker.MakeThing(VariousDefOf.LM_DragonCum);
-                                    dragonPenisThing.stackCount = (int)(6);
+                                    dragonPenisThing.stackCount = (int)(pawn.BodySize * 4 * penisMultiplier * traitMultiplier * quirkMultiplier * needMultiplier);
                                     GenPlace.TryPlaceThing(dragonPenisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
                                     return;
                                 }
@@ -67,10 +70,10 @@ namespace MilkingMachine
                                     penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
                                 // Trait and quirk checks
                                 else if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
-                                    traitMultiplier = 3;
+                                    traitMultiplier = 2;
                                 else if (pawn.Has(Quirk.Messy))
                                     quirkMultiplier = 2;
-                                penisThing.stackCount = (int)(pawn.BodySize * penisMultiplier * traitMultiplier * quirkMultiplier * horse * dog * demon);
+                                penisThing.stackCount = (int)(pawn.BodySize * penisMultiplier * traitMultiplier * needMultiplier * quirkMultiplier * horse * dog * demon);
                                 if (penisThing.stackCount < 1)
                                     penisThing.stackCount = 1;
                                 GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
