@@ -41,7 +41,7 @@ namespace MilkingMachine
                                 // Humans produce at min 216ml max 3031ml or just under 1u for both average 1623.5ml
                                 PartSizeExtension.TryGetBreastWeight(breast, out float breastWeight);
                                 PartSizeExtension.TryGetCupSize(breast, out float cupSize);
-                                breastMultiplier = cupSize / breastWeight;
+                                breastMultiplier = (cupSize + breastWeight);
                                 // Mod checks
                                 if (MlieMilkableColonists == true || ED86MilkableColonists == true)
                                     if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Drug) || pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Permanent))

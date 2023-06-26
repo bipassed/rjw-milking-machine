@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingDef ParentName="PlantFoodRawBase">
+	<ThingDef ParentName="OrganicProductBase">
 		<defName>LM_DragonCum</defName>
 		<label>dragon cum</label>
 		<description>A half-gallon container of pure dragon semen. Very filling, creamy and tasty.</description>
@@ -20,7 +20,7 @@
 			<Beauty>-10</Beauty>
 			<MarketValue>100</MarketValue>
 			<Mass>2</Mass>
-      		<Nutrition>0.5</Nutrition>
+			<Nutrition>0.5</Nutrition>
 		</statBases>
 		<ingestible>
 			<foodType>Fluid, AnimalProduct</foodType>
