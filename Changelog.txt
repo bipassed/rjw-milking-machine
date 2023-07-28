@@ -1,3 +1,7 @@
+27 July 2023
+- Fixed some shit
+- Archotech bits now give 20x because I think it's funny
+
 16 June 2023
 - Changed LM_PenisMilkingHediff hungerRateFactorOffset from 0.2 to 0.1
 - Changed LM_PenisMilkingHediff moving capacity from -0.2 to -0.1

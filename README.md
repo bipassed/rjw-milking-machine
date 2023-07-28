@@ -3,9 +3,10 @@
 To begin milking a colonist you'll want to create either a penis milking machine or a breast milking machine, both costing 45 units of any leathery material at a tailoring bench. The penis milking machine produces a variable amount of used condoms / cum if [Sexperience](https://www.loverslab.com/topic/193448-mod-rjw-sexperience-continued/) is active each day. The same is said for a breast milking machine, but instead of cum it's milk. 
 Before you start your new milk farm, you should take note of the following:
  - Size matters
+ - Sex need matters
  - Vaginas do not produce anything
- - The only breasts that modify milk output are the udders
- - The only penises that modify cum output are horse, dog, demon and dragon
+ - The only breasts that modify milk output are the udders and archotech
+ - The only penises that modify cum output are horse, dog, demon, dragon and archotech
  - Multiple breasts and multiple penises increase production
 
 **Known Incompatibilities**
@@ -16,6 +17,7 @@ Before you start your new milk farm, you should take note of the following:
  - [RimNude](https://gitgud.io/Tory/rimnude-unofficial)
  - [Milkable Colonists (Ed86's Version)](https://gitgud.io/Ed86/rjw-mc)
  - [Milkable Colonists (Mlie's Continuation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2218407878)
+ - [Milkable Colonists (Onslort's Edition)](https://gitgud.io/Onslort/rjw-milkable-colonists-biotech/-/blob/master/About/About.xml)
  - [Sexperience](https://www.loverslab.com/topic/193448-mod-rjw-sexperience-continued/)
  
  **Credits**
@@ -24,5 +26,4 @@ Before you start your new milk farm, you should take note of the following:
  - Tory187 for helping with RimNude support
 
 **Roadmap (in order of greatest importance)**
- - onslort's Milkable Colonists support
  - Animal milking gear

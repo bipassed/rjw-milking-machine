@@ -15,11 +15,11 @@ namespace MilkingMachine
         public static bool ED86MilkableColonists = ModsConfig.IsActive("rjw.milk.humanoid");
         public static bool Biotech = ModsConfig.BiotechActive;
 
-        public static float breastMultiplier = 1;
-        public static float traitMultiplier = 1;
+        public static float size = 1;
+        public static float trait = 1;
         public static float mcLactating = 1;
         public static float bLactating = 1;
-        public static float udder = 1;
+        public static float breastType = 1;
         public override void Tick()
         {
             Pawn pawn = this.pawn;
@@ -41,23 +41,25 @@ namespace MilkingMachine
                                 // Humans produce at min 216ml max 3031ml or just under 1u for both average 1623.5ml
                                 PartSizeExtension.TryGetBreastWeight(breast, out float breastWeight);
                                 PartSizeExtension.TryGetCupSize(breast, out float cupSize);
-                                breastMultiplier = (cupSize + breastWeight);
+                                size = (cupSize + breastWeight);
                                 // Mod checks
                                 if (MlieMilkableColonists == true || ED86MilkableColonists == true)
                                     if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Drug) || pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Permanent))
                                         mcLactating = 2;
-                                else if (Biotech == true)
-                                    if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating))
-                                        bLactating = 2;
-                                // Racial breast checks
-                                else if (breast.LabelBase.ToLower().Contains("udder"))
-                                    udder = 6;
-                                // Trait checks
-                                else if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
-                                    traitMultiplier = 3;
+                                    else if (Biotech == true)
+                                        if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating))
+                                            bLactating = 2;
+                                        // Racial breast checks
+                                    if (breast.LabelBase.ToLower().Contains("udder"))
+                                        breastType = 6;
+                                    if (breast.LabelBase.ToLower().Contains("archotech"))
+                                        breastType = 20f;
+                                        // Trait checks
+                                    if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
+                                        trait = 3;
                                 Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
                                 Thing breastThing = ThingMaker.MakeThing(VariousDefOf.Milk);
-                                breastThing.stackCount = (int)(pawn.BodySize * breastMultiplier * mcLactating * bLactating * traitMultiplier * udder);
+                                breastThing.stackCount = (int)(pawn.BodySize * size  * mcLactating * bLactating * trait * breastType);
                                 if (breastThing.stackCount < 1)
                                     breastThing.stackCount = 1;
                                 GenPlace.TryPlaceThing(breastThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);

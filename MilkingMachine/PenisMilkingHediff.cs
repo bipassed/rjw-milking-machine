@@ -13,15 +13,12 @@ namespace MilkingMachine
     {
         public static bool Sexperience = ModsConfig.IsActive("rjw.sexperience");
 
-        public static float penisMultiplier = 1;
-        public static float traitMultiplier = 1;
-        public static float quirkMultiplier = 1;
-        public static float needMultiplier = 1;
-        public static float nutritionMultiplier = 1;
-        public static float horse = 1;
-        public static float dragon = 1;
-        public static float dog = 1;
-        public static float demon = 1;
+        public static float size = 1;
+        public static float trait = 1;
+        public static float quirk = 1;
+        public static float need = 1;
+        public static float nutrition = 1;
+        public static float penisType = 1;
         public override void Tick()
         {
             Pawn pawn = this.pawn;
@@ -49,20 +46,22 @@ namespace MilkingMachine
                                 // Demons probably produce x666 that of a human (666)
                                 PartSizeExtension.TryGetLength(penis, out float penisLength);
                                 PartSizeExtension.TryGetGirth(penis, out float penisGirth);
-                                penisMultiplier = penisGirth / penisLength;
-                                needMultiplier = (float)(2.1 - sexNeed.CurLevel);
-                                needMultiplier = (int)needMultiplier;
+                                size = penisGirth / penisLength;
+                                need = 2.1f - sexNeed.CurLevel;
+                                need = (int)need;
                                 // Racial penis checks
                                 if (penis.LabelBase.ToLower().Contains("equine"))
-                                    horse = 16;
-                                else if (penis.LabelBase.ToLower().Contains("canine"))
-                                    dog = 4;
-                                else if (penis.LabelBase.ToLower().Contains("demon"))
-                                    demon = 6.66f;
-                                else if (penis.LabelBase.ToLower().Contains("dragon"))
+                                    penisType = 16;
+                                if (penis.LabelBase.ToLower().Contains("canine"))
+                                    penisType = 4;
+                                if (penis.LabelBase.ToLower().Contains("demon"))
+                                    penisType = 6.66f;
+                                if (penis.LabelBase.ToLower().Contains("archotech"))
+                                    penisType = 20f; // Why not, they're archotech!!!
+                                if (penis.LabelBase.ToLower().Contains("dragon"))
                                 {
                                     Thing dragonPenisThing = ThingMaker.MakeThing(VariousDefOf.LM_DragonCum);
-                                    dragonPenisThing.stackCount = (int)(pawn.BodySize * 4 * penisMultiplier * traitMultiplier * quirkMultiplier * needMultiplier);
+                                    dragonPenisThing.stackCount = (int)(pawn.BodySize * 4 * size * trait * quirk * need);
                                     GenPlace.TryPlaceThing(dragonPenisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
                                     return;
                                 }
@@ -70,14 +69,16 @@ namespace MilkingMachine
                                 if (Sexperience == true)
                                 {
                                     penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
-                                    nutritionMultiplier = 5; //Gathered cum only has 0.01 nutrition
+                                    nutrition = 5; //Gathered cum only has 0.01 nutrition
                                 }
                                 // Trait and quirk checks
-                                else if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
-                                    traitMultiplier = 2;
-                                else if (pawn.Has(Quirk.Messy))
-                                    quirkMultiplier = 2;
-                                penisThing.stackCount = (int)(pawn.BodySize * penisMultiplier * traitMultiplier * nutritionMultiplier * needMultiplier * quirkMultiplier * horse * dog * demon);
+                                if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
+                                {
+                                    trait = 2;
+                                }
+                                if (pawn.Has(Quirk.Messy))
+                                    quirk = 2;
+                                penisThing.stackCount = (int)(pawn.BodySize * size * trait * nutrition * need * quirk * penisType);
                                 if (penisThing.stackCount < 1)
                                     penisThing.stackCount = 1;
                                 GenPlace.TryPlaceThing(penisThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
