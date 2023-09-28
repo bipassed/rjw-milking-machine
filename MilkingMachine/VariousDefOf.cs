@@ -25,6 +25,8 @@ namespace MilkingMachine
         public static HediffDef Lactating_Drug;
         [MayRequire("rjw.sexperience")]
         public static HediffDef Lactating_Permanent;
+        [MayRequire("rjw.milk.humanoid")]
+        public static ThingDef HumanMilk;
 
         [MayRequireBiotech]
         public static HediffDef Lactating;

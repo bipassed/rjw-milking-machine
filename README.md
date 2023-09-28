@@ -10,20 +10,16 @@ Before you start your new milk farm, you should take note of the following:
  - Multiple breasts and multiple penises increase production
 
 **Known Incompatibilities**
- - [Coffees RJW Ideology Addons](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons) | Will eventually be compat, but not my business
+ - [Coffees RJW Ideology Addons](https://gitgud.io/c0ffeeeeeeee/coffees-rjw-ideology-addons) | Not inherently incompatible, they just don't integrate with each other.
  - [Rimworld-Animation Patch](https://www.loverslab.com/files/file/23398-rimworld-animation-patch/) | This mod makes parts from RimNudeWorld not show up while wearing milking apparel
 
 **Supported Mods**
  - [RimNude](https://gitgud.io/Tory/rimnude-unofficial)
- - [Milkable Colonists (Ed86's Version)](https://gitgud.io/Ed86/rjw-mc)
  - [Milkable Colonists (Mlie's Continuation)](https://steamcommunity.com/sharedfiles/filedetails/?id=2218407878)
- - [Milkable Colonists (Onslort's Edition)](https://gitgud.io/Onslort/rjw-milkable-colonists-biotech/-/blob/master/About/About.xml)
+ - [Milkable Colonists (Onslort's Edition)](https://gitgud.io/Onslort/rjw-milkable-colonists-biotech/-/tree/master)
  - [Sexperience](https://www.loverslab.com/topic/193448-mod-rjw-sexperience-continued/)
  
  **Credits**
  - ShauaPuta for helping with code
  - Void Chicken for helping with code 
  - Tory187 for helping with RimNude support
-
-**Roadmap (in order of greatest importance)**
- - Animal milking gear

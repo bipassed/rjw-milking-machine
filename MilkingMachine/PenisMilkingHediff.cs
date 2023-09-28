@@ -25,7 +25,7 @@ namespace MilkingMachine
             Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
             if (pawn.IsHashIntervalTick(60000)) // 60000
             {
-                if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave)
+                if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave || pawn.IsAnimal())
                 {
                     IEnumerable<Hediff> penises = pawn.GetGenitalsList().Where(genitalHediff => Custom_Genital_Helper.is_penis(genitalHediff));
                     bool hasPenis = !penises.EnumerableNullOrEmpty();
@@ -47,8 +47,23 @@ namespace MilkingMachine
                                 PartSizeExtension.TryGetLength(penis, out float penisLength);
                                 PartSizeExtension.TryGetGirth(penis, out float penisGirth);
                                 size = penisGirth / penisLength;
-                                need = 2.1f - sexNeed.CurLevel;
-                                need = (int)need;
+                                if (!pawn.IsAnimal())
+                                {
+                                    need = 2.1f - sexNeed.CurLevel;
+                                    need = (int)need;
+                                }
+                                // Trait and quirk checks
+                                if (!pawn.IsAnimal())
+                                {
+                                    if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
+                                    {
+                                        trait = 2;
+                                    }
+                                    if (pawn.Has(Quirk.Messy))
+                                    {
+                                        quirk = 2;
+                                    }
+                                }
                                 // Racial penis checks
                                 if (penis.LabelBase.ToLower().Contains("equine"))
                                     penisType = 16;
@@ -71,13 +86,7 @@ namespace MilkingMachine
                                     penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
                                     nutrition = 5; //Gathered cum only has 0.01 nutrition
                                 }
-                                // Trait and quirk checks
-                                if (pawn.story.traits.HasTrait(VariousDefOf.LM_HighTestosterone) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow))
-                                {
-                                    trait = 2;
-                                }
-                                if (pawn.Has(Quirk.Messy))
-                                    quirk = 2;
+                                // final milk
                                 penisThing.stackCount = (int)(pawn.BodySize * size * trait * nutrition * need * quirk * penisType);
                                 if (penisThing.stackCount < 1)
                                     penisThing.stackCount = 1;

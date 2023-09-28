@@ -12,7 +12,7 @@ namespace MilkingMachine
     public class BreastMilkingHediff : HediffWithComps
     {
         public static bool MlieMilkableColonists = ModsConfig.IsActive("mlie.milkablecolonists");
-        public static bool ED86MilkableColonists = ModsConfig.IsActive("rjw.milk.humanoid");
+        public static bool OnslortMilkableColonists = ModsConfig.IsActive("rjw.milk.humanoid");
         public static bool Biotech = ModsConfig.BiotechActive;
 
         public static float size = 1;
@@ -25,7 +25,7 @@ namespace MilkingMachine
             Pawn pawn = this.pawn;
             if (pawn.IsHashIntervalTick(60000)) //60000
             {
-                if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave)
+                if (pawn.IsColonist || pawn.IsPrisoner || pawn.IsSlave || pawn.IsAnimal())
                 {
                     IEnumerable<Hediff> breasts = pawn.GetBreastList().Where(breastHediff => Custom_Genital_Helper.is_breast(breastHediff));
                     bool hasBreast = !breasts.EnumerableNullOrEmpty();
@@ -43,7 +43,7 @@ namespace MilkingMachine
                                 PartSizeExtension.TryGetCupSize(breast, out float cupSize);
                                 size = (cupSize + breastWeight);
                                 // Mod checks
-                                if (MlieMilkableColonists == true || ED86MilkableColonists == true)
+                                if (MlieMilkableColonists == true || OnslortMilkableColonists == true)
                                     if (pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Drug) || pawn.health.hediffSet.HasHediff(VariousDefOf.Lactating_Permanent))
                                         mcLactating = 2;
                                     else if (Biotech == true)
@@ -55,15 +55,28 @@ namespace MilkingMachine
                                     if (breast.LabelBase.ToLower().Contains("archotech"))
                                         breastType = 20f;
                                         // Trait checks
-                                    if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
-                                        trait = 3;
-                                Need sexNeed = pawn.needs.TryGetNeed(VariousDefOf.Sex);
-                                Thing breastThing = ThingMaker.MakeThing(VariousDefOf.Milk);
-                                breastThing.stackCount = (int)(pawn.BodySize * size  * mcLactating * bLactating * trait * breastType);
-                                if (breastThing.stackCount < 1)
-                                    breastThing.stackCount = 1;
-                                GenPlace.TryPlaceThing(breastThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
-                                sexNeed.CurLevel += 1;
+                                    if (!pawn.IsAnimal())
+                                    {
+                                        if (pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalCow) || pawn.story.traits.HasTrait(VariousDefOf.LM_NaturalHucow))
+                                            trait = 3;
+                                    }
+                                // Thing check
+                                if (OnslortMilkableColonists == true)
+                                {
+                                    Thing breastThing = ThingMaker.MakeThing(VariousDefOf.HumanMilk);
+                                    breastThing.stackCount = (int)(pawn.BodySize * size * mcLactating * bLactating * trait * breastType);
+                                    if (breastThing.stackCount < 1)
+                                        breastThing.stackCount = 1;
+                                    GenPlace.TryPlaceThing(breastThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+                                }
+                                else
+                                {
+                                    Thing breastThing = ThingMaker.MakeThing(VariousDefOf.Milk);
+                                    breastThing.stackCount = (int)(pawn.BodySize * size * mcLactating * bLactating * trait * breastType);
+                                    if (breastThing.stackCount < 1)
+                                        breastThing.stackCount = 1;
+                                    GenPlace.TryPlaceThing(breastThing, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+                                }
                             }
                         }
                     }

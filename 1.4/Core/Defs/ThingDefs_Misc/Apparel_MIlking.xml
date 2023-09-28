@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="LM_MM" ParentName="ApparelMakeableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+      <li>Fabric</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>1</Mass>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="LM_MM">
+    <defName>LM_PenisMilkingMachine</defName>
+    <label>penis milking machine</label>
+    <description>This milking machine is attatched to the penis, allowing the user some mobility but due to the constant stimuli, it becomes hard for the wearer to focus.</description>
+    <graphicData>
+      <texPath>PM/PM</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.00</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>GenitalsBPG</li>
+      </bodyPartGroups>
+      <wornGraphicPath>PM/PM</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <comps>
+      <li Class="VFECore.CompProperties_ApparelHediffs">
+        <hediffDefnames>
+          <li>LM_PenisMilkingHediff</li>
+        </hediffDefnames>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="shauaputa.rimnudeworld" Class="RevealingApparel.ApparelRevealingExtension">
+        <revealingBodyPartEntries>
+          <li>
+            <revealingPath>Breasts/FeaturelessLeft</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Breasts/FeaturelessRight</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Anus/FeaturelessAnus</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+        </revealingBodyPartEntries>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="LM_MM">
+    <defName>LM_BreastMilkingMachine</defName>
+    <label>breast milking machine</label>
+    <description>This milking machine is attatched to the breasts, allowing the user some mobility but due to the constant stimuli, it becomes hard for the wearer to focus.</description>
+    <graphicData>
+      <texPath>BM/BM</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.00</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>ChestBPG</li>
+      </bodyPartGroups>
+      <wornGraphicPath>BM/BM</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <comps>
+      <li Class="VFECore.CompProperties_ApparelHediffs">
+        <hediffDefnames>
+          <li>LM_BreastMilkingHediff</li>
+        </hediffDefnames>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="shauaputa.rimnudeworld" Class="RevealingApparel.ApparelRevealingExtension">
+        <revealingBodyPartEntries>
+          <li>
+            <revealingPath>Breasts/FeaturelessLeft</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Breasts/FeaturelessRight</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Genitals/Testicles/FeaturelessTesticles</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Genitals/Pubes/Pubes</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+          <li>
+            <revealingPath>Anus/FeaturelessAnus</revealingPath>
+            <revealingBodyTypes>
+              <li>Female</li>
+              <li>Thin</li>
+              <li>Male</li>
+              <li>Fat</li>
+              <li>Hulk</li>
+            </revealingBodyTypes>
+          </li>
+        </revealingBodyPartEntries>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

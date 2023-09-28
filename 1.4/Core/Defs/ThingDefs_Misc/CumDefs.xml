@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>LM_DragonCum</defName>
+		<label>dragon cum</label>
+		<description>A half-gallon container of pure dragon semen. Very filling, creamy and tasty.</description>
+		<graphicData>
+			<texPath>DragonCum</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>6</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<generateCommonality>0.0</generateCommonality>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Beauty>-10</Beauty>
+			<MarketValue>100</MarketValue>
+			<Mass>2</Mass>
+			<Nutrition>0.5</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, AnimalProduct</foodType>
+			<preferability>DesperateOnlyForHumanlikes</preferability>
+			<tasteThought>AteRawFood</tasteThought>
+		</ingestible>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
+		<tradeability>Buyable</tradeability>
+	</ThingDef>
+</Defs>
