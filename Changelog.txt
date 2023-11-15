@@ -1,5 +1,8 @@
+12 October 2023
+- Added support for bipassed addons
+
 20 September 2023
-- Added animal milking gear
+- Added animal milking gear (not working)
 - Changed breast milking output if Onslort's fork is active to human milk
 - Removed support for ED86's milkable colonists as it is not updated for 1.4 and Onslort's is the most updated version
 - Updated README.md

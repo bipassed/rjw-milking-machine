@@ -12,6 +12,7 @@ namespace MilkingMachine
     public class PenisMilkingHediff : HediffWithComps
     {
         public static bool Sexperience = ModsConfig.IsActive("rjw.sexperience");
+        public static bool Bipassed = ModsConfig.IsActive("bipassed.addons");
 
         public static float size = 1;
         public static float trait = 1;
@@ -84,7 +85,10 @@ namespace MilkingMachine
                                 if (Sexperience == true)
                                 {
                                     penisThing = ThingMaker.MakeThing(VariousDefOf.GatheredCum);
-                                    nutrition = 5; //Gathered cum only has 0.01 nutrition
+                                    if (Bipassed)
+                                        nutrition = 1; // my addons mod makes gathered cum 0.05 nutrition
+                                    else
+                                        nutrition = 5; //Gathered cum only has 0.01 nutrition
                                 }
                                 // final milk
                                 penisThing.stackCount = (int)(pawn.BodySize * size * trait * nutrition * need * quirk * penisType);
